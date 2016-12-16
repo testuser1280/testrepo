@@ -1,0 +1,112 @@
+1.4.3
+-----
+* Added Support for BirthDate API Param in the following Processing APIs
+    - Authorize
+    - Authorize3D
+    - AccountVerification
+    - AVS
+    - InitRecurringSale
+    - InitRecurringSale3D
+    - PayByVouchers Sale
+    - Payout
+    - Sale
+    - Sale3D
+* Update Specs
+    - WPF Create
+    - PBV Sale
+    - PBV Yeepay
+    
+1.4.2
+-----
+* Updated validations for WPF APM custom parameters
+
+1.4.1
+-----
+* Updated APIs for PBV Sale and PBV Yeepay 
+    - New transaction param CardType
+    - New transaction param RedeemType
+* Added validations for WPF transactions and PBV transaction parameters
+
+1.4.0
+-----
+* Add support for Genesis Gateway v4.9
+* Add support for POLi, WebMoney, Vouchers (w/ Cards), Vouchers (via oBeP) payment methods
+* Add support for iDEAL via PPRO
+* Add support for FraudReports
+* Remove payment method BankTransfers\PayByVoucher
+
+1.3.1
+-----
+* Minor changes - README and Travis configuration tweaks
+
+1.3.0
+-----
+
+* Add support for Genesis Gateway v4.0
+* Add support for iDEAL ABN Bank retrieval
+* Add deprecation notice for payment method "SOFORT iDEAL"
+* New transaction types:
+    - iDEAL (via ABN)
+    - Neteller
+
+1.2.0
+-----
+
+* Add support for Genesis Gateway v3.9
+* Add support for 'eMerchantPay' endpoint
+* New transaction types:
+    - CashU
+    - eZeeWallet
+    - PayByVoucher
+    - PaySafeCard
+    - PPRO
+    - SOFORT
+    - iDEAL (via SOFORT)
+* Internal refactoring:
+    - API requests namespace changes
+    - API\Response will now throw Exceptions automatically, when transaction failed or there are network / parsing errors
+    - API\Notification now accepts incoming data from the constructor and has the ability to reconcile with Genesis
+    - Rename 'stream_context' interface to 'stream'
+    - Builder interface now accepts only language names, i.e. 'xml', 'json'
+    - Timestamp field in the response object is now an instance of DateTime object, whenever DateTime parsing is possible
+    - Deprecate methods getFormattedAmount() and getFormattedTimestamp() from API\Response as they are applied automatically
+* System Requirements are now being verified at runtime
+* Update the CA Bundle
+
+1.1.0
+-----
+
+* Add new methods to API\Notification:
+    - isAPINotification()
+    - isWPFNotification()
+    - renderResponse()
+* Change API\Response::getResponseObject type from SimpleXMLElement to stdClass
+* Internal refactoring
+* Update comments/headers
+
+1.0.2
+-----
+
+* Add support for i18n localization
+* Add flag "isPartiallyApproved()", to API\Response, for partially-approved transactions
+* Add helper method API\Response::getFormattedAmount()
+* Add helper method API\Response::getFormattedTimestamp()
+* Add Network\Wrapper\Stream configuration based on the PHP version
+* Fix Nominal transaction amount conversion
+* Update PHPDoc comments
+* Update Specs
+
+1.0.1
+-----
+
+* Move the ISO-4217 currency handling to the post-processing
+* Fix API\Response::isSuccessful() returning wrong status on some transaction types
+* Fix Utils\Currency types
+* Update PHPDoc Comments
+* Update README
+* Update Specs
+
+1.0.0
+-----
+
+* Initial version

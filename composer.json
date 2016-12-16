@@ -1,0 +1,65 @@
+{
+  "name": "genesisgateway/genesis_php",
+  "description": "PHP Client for Genesis Payment Processing Gateway",
+  "version": "1.4.3",
+  "license": "MIT",
+  "keywords": [
+    "genesis",
+    "genesisgateway",
+    "payments",
+    "payment_gateway",
+    "payment_processing",
+    "e-commerce",
+    "pci-dss",
+    "visa",
+    "mastercard",
+    "debit_card",
+    "credit_card",
+    "authorize",
+    "capture",
+    "recurring",
+    "refund",
+    "void",
+    "3d-secure",
+    "neteller",
+    "ezeewallet",
+    "paybyvouchers",
+    "sofort",
+    "paysafecard",
+    "ppro",
+    "ideal",
+    "cashu",
+    "elv",
+    "eps",
+    "giropay",
+    "przelewy24",
+    "qiwi",
+    "safetypay",
+    "teleingreso",
+    "trustpay",
+    "webmoney",
+    "poli",
+    "tc40",
+    "fraud",
+    "chargeback"
+  ],
+  "require": {
+    "php": ">=5.3.2",
+    "ext-bcmath": "*",
+    "ext-curl": "*",
+    "ext-filter": "*",
+    "ext-hash": "*",
+    "ext-simplexml": "*",
+    "ext-xmlreader": "*",
+    "ext-xmlwriter": "*"
+  },
+  "require-dev": {
+    "fzaninotto/faker": "1.*@stable",
+    "phpspec/phpspec": "2.*@stable"
+  },
+  "autoload": {
+    "psr-0": {
+      "Genesis": "src/"
+    }
+  }
+}
