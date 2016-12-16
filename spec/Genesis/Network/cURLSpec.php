@@ -15,10 +15,18 @@ class cURLSpec extends ObjectBehavior
 
     function it_can_connect_to_staging_gateway()
     {
-        $endpoints = array(
-            \Genesis\API\Constants\Endpoints::ECOMPROCESSING,
-            \Genesis\API\Constants\Endpoints::EMERCHANTPAY
-        );
+        if (getenv('TRAVIS') != '') {
+            $endpoints = array(
+                \Genesis\API\Constants\Endpoints::EMERCHANTPAY
+            );
+        }
+        else
+        {
+            $endpoints = array(
+                \Genesis\API\Constants\Endpoints::ECOMPROCESSING,
+                \Genesis\API\Constants\Endpoints::EMERCHANTPAY
+            );
+        }
 
         Config::setEnvironment(
             \Genesis\API\Constants\Environments::STAGING
@@ -35,10 +43,18 @@ class cURLSpec extends ObjectBehavior
 
     function it_can_connect_to_staging_wpf()
     {
-        $endpoints = array(
-            \Genesis\API\Constants\Endpoints::ECOMPROCESSING,
-            \Genesis\API\Constants\Endpoints::EMERCHANTPAY
-        );
+        if (getenv('TRAVIS') != '') {
+            $endpoints = array(
+                \Genesis\API\Constants\Endpoints::EMERCHANTPAY
+            );
+        }
+        else
+        {
+            $endpoints = array(
+                \Genesis\API\Constants\Endpoints::ECOMPROCESSING,
+                \Genesis\API\Constants\Endpoints::EMERCHANTPAY
+            );
+        }
 
         Config::setEnvironment(
             \Genesis\API\Constants\Environments::STAGING

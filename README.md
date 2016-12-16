@@ -1,11 +1,6 @@
 Genesis PHP
 ===========
 
-[![Build Status](https://img.shields.io/travis/GenesisGateway/genesis_php.svg?style=flat)](https://travis-ci.org/GenesisGateway/genesis_php)
-[![Latest Stable Version](https://poser.pugx.org/genesisgateway/genesis_php/v/stable)](https://packagist.org/packages/genesisgateway/genesis_php)
-[![Total Downloads](https://img.shields.io/packagist/dt/GenesisGateway/genesis_php.svg?style=flat)](https://packagist.org/packages/GenesisGateway/genesis_php)
-[![Software License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](LICENSE)
-
 Overview
 --------
 
